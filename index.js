@@ -6,18 +6,23 @@ const cartRouts = require("./Routes/cartRoutes");
 const orderRouts = require("./Routes/orderRoutes");
 const port = 3000;
 const mongoose = require('mongoose');
-const cors = require('cors');
+const cors = require("cors");
 const WishlistRouts = require("./Routes/wishlistRoutes");
 
 
 app.use(express.json());
-app.use(cors({ origin: 'http://localhost:5173' }));
+app.use(cors({
+    origin: '*', // Allow all origins (temporary for testing)
+    methods: 'GET, POST, PUT, DELETE',
+    allowedHeaders: 'Content-Type, Authorization'
+}));
+
 
 
 
 // mongoose.connect('mongodb+srv://tamilkumaran1494:Tamil2004@cluster0.o3hc8rf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/')
 
-mongoose.connect('mongodb+srv://tamilkumaran1494:tamil2004@cluster0.o3hc8rf.mongodb.net/Automotive?retryWrites=true&w=majority&appName=Cluster0/',{
+mongoose.connect('mongodb+srv://tamilkumaran1494:tamil2004@cluster0.o3hc8rf.mongodb.net/Automotive?retryWrites=true&w=majority&appName=Cluster0',{
 
     // useNewUrlParser: true,
     // useUnifiedTopology: true
