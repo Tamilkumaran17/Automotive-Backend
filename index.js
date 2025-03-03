@@ -11,18 +11,14 @@ const WishlistRouts = require("./Routes/wishlistRoutes");
 
 
 app.use(express.json());
-app.use(cors({
-    origin: '*', // Allow all origins (temporary for testing)
-    methods: 'GET, POST, PUT, DELETE',
-    allowedHeaders: 'Content-Type, Authorization'
-}));
+app.use(cors());
 
 
 
 
 // mongoose.connect('mongodb+srv://tamilkumaran1494:Tamil2004@cluster0.o3hc8rf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/')
 
-mongoose.connect('mongodb+srv://tamilkumaran1494:tamil2004@cluster0.o3hc8rf.mongodb.net/Automotive?retryWrites=true&w=majority&appName=Cluster0',{
+mongoose.connect('mongodb+srv://tamilkumaran1494:tamil2004@cluster0.o3hc8rf.mongodb.net/Automotive?retryWrites=true&w=majority&appName=Cluster0/',{
 
     // useNewUrlParser: true,
     // useUnifiedTopology: true
